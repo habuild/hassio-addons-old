@@ -1,12 +1,15 @@
 #!/bin/sh
 set -e
 
+# --- CREATE CRON ----
+
+
 # --- GENERATE CONFIG --
 ./generateConfig.sh SBFspot.cfg SBFspotUpload.cfg
 
 # ---- RUN ----
-# SBFspot
-./SBFspot -v -finq -nocsv
+# cron
+/usr/sbin/crond -f -l 8
 
 # SBFspotUploadDaemon
 ./SBFspotUploadDaemon

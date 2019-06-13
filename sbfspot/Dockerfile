@@ -25,9 +25,13 @@ RUN cp /tmp/SBFspotUploadDaemon/mysql/bin/SBFspotUploadDaemon /
 RUN cp /tmp/SBFspot/date_time_zonespec.csv /
 run cp /tmp/SBFspot/TagList* /
 
+
 COPY generateConfig.sh /
 COPY run.sh /
 
 RUN chmod a+x /run.sh /generateConfig.sh /SBFspot /SBFspotUploadDaemon
+
+# install cron
+RUN echo '*/5 * * * *   /SBFspot -v -finq' > /etc/crontabs/root
 
 CMD [ "/run.sh" ]
