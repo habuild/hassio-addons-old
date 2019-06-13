@@ -15,7 +15,7 @@ RUN cd /tmp\
     && cd sbfspot/SBFspot\
     && make mysql\
     && cd ../SBFspotUploadDaemon\
-    && make mysql\
+    && make mysql
 
 # Copy data for add-on
 COPY /tmp/sbfspot/SBFspot/mysql/bin/SBFspot /
