@@ -1,5 +1,8 @@
 CFG_PATH=$1
+CFG_PATH_UPLOAD=$2
 CONFIG_PATH=/data/options.json
+
+echo "Generating $CFG_PATH & $CFG_PATH_UPLOAD"
 
 CONFIG_BTADDRESS="$(jq --raw-output '.BTAddress' $CONFIG_PATH)"
 CONFIG_PASSWORD="$(jq --raw-output '.Password' $CONFIG_PATH)"
@@ -215,7 +218,7 @@ EOL
 
 #cat $1
 
-cat > $2 <<EOL
+cat > $CFG_PATH_UPLOAD <<EOL
 ################################################################################
 #  SBFspotUpload.cfg - Configuration file for SBFspotUploadService/Daemon
 #  (c)2012-2014, SBF (https://sbfspot.codeplex.com)
@@ -271,4 +274,8 @@ SQL_Username=$CONFIG_SQL_USERNAME
 SQL_Password=$CONFIG_SQL_PASSWORD
 EOL
 
-#cat $2
+#cat $CFG_PATH_UPLOAD
+
+# create folders
+mkdir -p $CONFIG_OUTPUTPATH
+mkdir -p $CONFIG_LOGDIR

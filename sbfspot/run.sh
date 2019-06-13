@@ -10,4 +10,3 @@ set -e
 
 # SBFspotUploadDaemon
 ./SBFspotUploadDaemon
-
