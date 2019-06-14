@@ -32,7 +32,7 @@ COPY run.sh /
 RUN chmod a+x /run.sh /generateConfig.sh /SBFspot /SBFspotUploadDaemon
 
 # install cron
-RUN echo '*/5 * * * *   /SBFspot -v -finq' > /etc/crontabs/root
+RUN echo '*/5 * * * *   /SBFspot -v -finq > /dev/stdout' > /etc/crontabs/root
 
 # Labels
 LABEL \
