@@ -10,7 +10,7 @@ set -e
 # ---- RUN ----
 # cron
 echo 'Starting cron:'
-/usr/sbin/crond -b
+/usr/sbin/crond -b -L /dev/stdout -l 8
 echo 'Done.'
 
 echo 'Starting daemon'
