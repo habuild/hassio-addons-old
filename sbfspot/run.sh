@@ -9,6 +9,6 @@ set -e
 
 # ---- RUN ----
 # cron
-/usr/sbin/crond -l 8
+/usr/sbin/crond -b
 
 ./SBFspotUploadDaemon
