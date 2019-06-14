@@ -9,6 +9,9 @@ set -e
 
 # ---- RUN ----
 # cron
+echo 'Starting cron:'
 /usr/sbin/crond -b
+echo 'Done.'
 
+echo 'Starting daemon'
 ./SBFspotUploadDaemon
