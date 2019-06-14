@@ -9,7 +9,6 @@ set -e
 
 # ---- RUN ----
 # cron
-/usr/sbin/crond -f -l 8
+/usr/sbin/crond -l 8
 
-# SBFspotUploadDaemon
 ./SBFspotUploadDaemon
