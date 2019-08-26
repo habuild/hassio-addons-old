@@ -7,6 +7,8 @@ rc-status -a
 echo 'Show all services.'
 rc-status -s
 
+rc-service SBFspotUploadDaemon.service start
+
 # --- CREATE CRON ----
 
 
