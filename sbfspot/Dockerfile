@@ -30,7 +30,7 @@ RUN  sed -i \
             /etc/init.d/modloop \
     # Can't do cgroups
     && sed -i 's/cgroup_add_service /# cgroup_add_service /g' /lib/rc/sh/openrc-run.sh \
-    && sed -i 's/VSERVER/DOCKER/Ig' /lib/rc/sh/init.sh
+    && sed -i 's/VSERVER/DOCKER/Ig' /lib/rc/sh/init.sh \
     && touch /run/openrc/softlevel
 
 # download and buid SBFspot
