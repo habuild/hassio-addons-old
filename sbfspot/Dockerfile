@@ -7,7 +7,7 @@ ENV LANG C.UTF-8
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # install requirements
-RUN apk update && apk upgrade && apk add --no-cache jq git g++ make musl-dev mysql-dev bluez-dev boost boost-dev curl-dev
+RUN apk update && apk upgrade && apk add --no-cache jq git g++ make musl-dev mysql-dev bluez-dev boost boost-dev curl-dev openrc
 
 # download and buid SBFspot
 RUN \
@@ -27,12 +27,16 @@ run cp /tmp/SBFspot/TagList* /
 
 
 COPY generateConfig.sh /
+COPY SBFspotUploadDaemon.service /etc/init.d/SBFspotUploadDaemon.service
 COPY run.sh /
 
-RUN chmod a+x /run.sh /generateConfig.sh /SBFspot /SBFspotUploadDaemon
+RUN chmod a+x /run.sh /generateConfig.sh /SBFspot /SBFspotUploadDaemon /etc/init.d/SBFspotUploadDaemon.service
 
 # install cron
 RUN echo '*/5 * * * *   /SBFspot -v -finq > /dev/stdout' > /etc/crontabs/root
+
+# install service
+RUN rc-update add SBFspotUploadDaemon.service default
 
 # Labels
 LABEL \

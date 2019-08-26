@@ -1,0 +1,10 @@
+#!/sbin/openrc-run
+
+description="SBFspot upload daemon"
+
+start()
+{
+    ebegin "Start daemon"
+    /SBFspotUploadDaemon
+    eend $?
+}

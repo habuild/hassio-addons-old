@@ -9,9 +9,8 @@ set -e
 
 # ---- RUN ----
 # cron
-echo 'Starting cron:'
-/usr/sbin/crond -b
-echo 'Done.'
+echo 'Starting cron in foreground'
+/usr/sbin/crond -f
 
-echo 'Starting daemon'
-./SBFspotUploadDaemon
+# echo 'Starting daemon'
+# ./SBFspotUploadDaemon
