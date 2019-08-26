@@ -5,6 +5,6 @@ description="SBFspot upload daemon"
 start()
 {
     ebegin "Start daemon"
-    /SBFspotUploadDaemon
+    /SBFspotUploadDaemon -c /SBFspotUpload.cfg
     eend $?
 }
