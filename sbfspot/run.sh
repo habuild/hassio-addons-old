@@ -1,6 +1,12 @@
 #!/bin/sh
 set -e
 
+echo 'Show all runlevels and their services.'
+rc-status -a
+
+echo 'Show all services.'
+rc-status -s
+
 # --- CREATE CRON ----
 
 
