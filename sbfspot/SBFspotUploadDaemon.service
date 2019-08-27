@@ -1,7 +1,7 @@
 #!/sbin/openrc-run
 
 description="SBFspot upload daemon"
-pidfile="/run/SBFspotUploadDaemon.pid"
+#pidfile="/run/SBFspotUploadDaemon.pid"
 command="/SBFspotUploadDaemon"
 command_opts=" -c /SBFspotUpload.cfg"
 
@@ -16,7 +16,7 @@ start()
     start-stop-daemon --start --background \
     --exec $command \
     -- $command_opts \
-    --make-pidfile --pidfile $pidfile
+    #--make-pidfile --pidfile $pidfile
     eend $?
 }
 
@@ -24,14 +24,14 @@ stop() {
     ebegin "Stopping SBFspotUploadDaemon"
     start-stop-daemon --stop \
     --exec $command \
-    --pidfile $pidfile
+    #--pidfile $pidfile
     eend $?
 }
 
 reload() {
     ebegin "Reloading SBFspotUploadDaemon"
     start-stop-daemon --exec $command \
-    --pidfile $pidfile \
+    #--pidfile $pidfile \
     -s 1
     eend $?
 }
