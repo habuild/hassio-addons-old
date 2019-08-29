@@ -62,7 +62,7 @@ RUN echo '*/5 6-22 * * *    /SBFspot -v -ad1 -am0 -ae0 > /dev/stdout' > /etc/cro
 # monthly data SBFspot
 RUN echo '55 05 * * *       /SBFspot -v -sp0 -ad0 -am1 -ae1 -finq > /dev/stdout' >> /etc/crontabs/root
 # openrc restart crashed services
-RUN echo '*/5 * * * *       ./openrc-restart-crashed.sh -- SBFspotUploadDaemon.service > /dev/stdout' >> /etc/crontabs/root
+RUN echo '*/5 * * * *       /openrc-restart-crashed.sh -- SBFspotUploadDaemon.service > /dev/stdout' >> /etc/crontabs/root
 # openrc status logging
 RUN echo '*/5 * * * *       rc-status -s > /dev/stdout' >> /etc/crontabs/root
 
