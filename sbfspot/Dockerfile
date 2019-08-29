@@ -47,19 +47,22 @@ run cp /tmp/SBFspot/TagList* /
 
 
 COPY generateConfig.sh /
+COPY openrc-restart-crashed.sh /
 COPY SBFspotUploadDaemon.service /etc/init.d/SBFspotUploadDaemon.service
 COPY run.sh /
 
 # load volume
 VOLUME [ "/sys/fs/cgroup" ]
 
-RUN chmod a+x /run.sh /generateConfig.sh /SBFspot /SBFspotUploadDaemon /etc/init.d/SBFspotUploadDaemon.service
+RUN chmod a+x /run.sh /generateConfig.sh /openrc-restart-crashed.sh /SBFspot /SBFspotUploadDaemon /etc/init.d/SBFspotUploadDaemon.service
 
 # --- install cron ---
 # daily data SBFspot
 RUN echo '*/5 6-22 * * *    /SBFspot -v -ad1 -am0 -ae0 > /dev/stdout' > /etc/crontabs/root
 # monthly data SBFspot
 RUN echo '55 05 * * *       /SBFspot -v -sp0 -ad0 -am1 -ae1 -finq > /dev/stdout' >> /etc/crontabs/root
+# openrc restart crashed services
+RUN echo '*/5 * * * *       ./openrc-restart-crashed.sh -- openrc-restart-crashed.sh > /dev/stdout' >> /etc/crontabs/root
 # openrc status logging
 RUN echo '*/5 * * * *       rc-status -s > /dev/stdout' >> /etc/crontabs/root
 
