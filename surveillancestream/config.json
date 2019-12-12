@@ -1,0 +1,25 @@
+{
+    "name": "Surveillance strean",
+    "version": "0.0.1",
+    "slug": "surveillance_stream",
+    "description": "Surveillance stream",
+    "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+    "startup": "before",
+    "boot": "auto",
+    "schema": {
+        "db_url": "str",
+        "recording_folder": "str"
+    },
+    "options": {
+        "db_url": "mysql://{username}:{password}@{host}/{database}",
+        "recording_folder": "/path/to/recordings"
+    },
+    "ports": {
+        "3001/tcp": null,
+        "4000/tcp": null
+    },
+    "ports_description": {
+        "3001/tcp": "Web interface",
+        "4000/tcp": "GraphQL server"
+    }
+  }
