@@ -21,5 +21,6 @@
     "ports_description": {
         "3001/tcp": "Web interface",
         "4000/tcp": "GraphQL server"
-    }
+    },
+    "image": "laurens55/hassio-surveillance_stream-{arch}"
   }
