@@ -73,7 +73,7 @@ RUN \
     && cd ..
 
 # Copy data for add-on
-COPY run.sh run.sh
-RUN chmod a+x run.sh
+COPY run.sh /opt/surveillancestream/run.sh
+RUN chmod a+x /opt/surveillancestream/run.sh
 
-CMD [ "run.sh" ]
+CMD [ "/opt/surveillancestream/run.sh" ]
