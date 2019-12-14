@@ -41,13 +41,13 @@ RUN \
 # Build
 RUN \
     cd backend \
-    && yarn install \
+    && yarn install --verbose \
     # && yarn run build \
     \
     && cd .. \
     \
     && cd frontend \
-    && yarn install \
+    && yarn install --verbose \
     # && yarn run build \
     \
     && cd ..
