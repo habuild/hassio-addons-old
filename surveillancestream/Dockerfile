@@ -15,7 +15,7 @@ ARG BUILD_VERSION
 USER root 
 
 # Install git, gnupg2
-RUN apt update && apt install -y git gnupg2
+RUN apt update && apt install -y git gnupg2 openssl
 
 # Install yarn
 RUN apt-get update && apt-get install -y curl apt-transport-https && \
@@ -41,13 +41,13 @@ RUN \
 # Build
 RUN \
     cd backend \
-    && yarn install --verbose \
+    && yarn install --network-timeout 1000000 \
     # && yarn run build \
     \
     && cd .. \
     \
     && cd frontend \
-    && yarn install --verbose \
+    && yarn install --network-timeout 1000000 \
     # && yarn run build \
     \
     && cd ..
