@@ -1,6 +1,6 @@
 {
     "name": "Surveillance strean",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "slug": "surveillance_stream",
     "description": "Surveillance stream",
     "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
