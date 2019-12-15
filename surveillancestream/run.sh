@@ -1,3 +1,4 @@
+#!/bin/bash
 # config
 cat /data/options.json
 CONFIG_PATH=/data/options.json
@@ -9,6 +10,7 @@ echo "CONFIG_RECORDING_FOLDER=${CONFIG_RECORDING_FOLDER}"
 
 ls -lah /opt/surveillancestream/
 
+# create .env files
 echo "db_url=${CONFIG_DB_URL}" > /opt/surveillancestream/backend/.env
 echo "recording_folder=${CONFIG_RECORDING_FOLDER}" >> /opt/surveillancestream/backend/.env
 cat /opt/surveillancestream/backend/.env
