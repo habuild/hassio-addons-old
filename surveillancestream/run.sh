@@ -30,4 +30,4 @@ cd /opt/surveillancestream/frontend && yarn run build && cd ..
 
 echo 'Run'
 # run
-node /opt/surveillancestream/dist/index.js
+node /opt/surveillancestream/backend/dist/index.js
