@@ -6,6 +6,7 @@
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "startup": "before",
   "boot": "auto",
+  "init": false,
   "options": {
   	"BTAddress": null,
 	"Password": "0000",
