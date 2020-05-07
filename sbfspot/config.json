@@ -1,11 +1,12 @@
 {
   "name": "SBFspot",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "slug": "sbfspot",
   "description": "sbfspot",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "startup": "before",
   "boot": "auto",
+  "init": false,
   "options": {
   	"BTAddress": null,
 	"Password": "0000",
