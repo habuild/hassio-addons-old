@@ -1,0 +1,4 @@
+{
+    "db_url": "mysql://{username}:{password}@{host}/{database}",
+    "recording_folder": "/path/to/recordings"
+}
