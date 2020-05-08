@@ -1,6 +1,6 @@
 {
     "name": "Surveillance stream",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "slug": "surveillance_stream",
     "description": "Surveillance stream",
     "arch": ["armv7"],
@@ -31,5 +31,4 @@
         "3001/tcp": "Web interface",
         "4000/tcp": "GraphQL server"
     },
-    "image": "laurens55/hassio-addon-surveillancestream-{arch}"
   }
