@@ -30,5 +30,5 @@
     "ports_description": {
         "3001/tcp": "Web interface",
         "4000/tcp": "GraphQL server"
-    },
+    }
   }
