@@ -1,4 +1,4 @@
-ARG BUILD_FROM
+ARG BUILD_FROM=hassioaddons/base:7.0.5
 FROM $BUILD_FROM
 
 # Set shell
