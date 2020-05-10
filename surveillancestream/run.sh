@@ -12,7 +12,7 @@ CONFIG_RECORDING_FOLDER="$(jq --raw-output '.recording_folder' $CONFIG_PATH)"
 # ls -lah /opt/surveillancestream/
 
 # create .env files
-echo "db_url=${CONFIG_DB_URL}" > /opt/surveillancestream/backend/backend/prisma/.env
+echo "db_url=${CONFIG_DB_URL}" > /opt/surveillancestream/backend/prisma/.env
 
 echo "recording_folder=${CONFIG_RECORDING_FOLDER}" > /opt/surveillancestream/backend/.env
 # cat /opt/surveillancestream/backend/backend/prisma/.env
