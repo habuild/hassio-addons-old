@@ -16,19 +16,25 @@
         "share"
     ],
     "schema": {
-        "db_url": "str",
-        "recording_folder": "str"
+        "DATABASE_HOST": "str",
+        "DATABASE_PORT": "str",
+        "DATABASE_USER": "str",
+        "DATABASE_PASS": "str",
+        "DATABASE_NAME": "str"
     },
     "options": {
-        "db_url": "mysql://{username}:{password}@{host}/{database}",
-        "recording_folder": "/path/to/recordings"
+        "DATABASE_HOST": "",
+        "DATABASE_PORT": "",
+        "DATABASE_USER": "",
+        "DATABASE_PASS": "",
+        "DATABASE_NAME": ""
     },
     "ports": {
         "3001/tcp": null,
-        "4000/tcp": null
+        "3000/tcp": null
     },
     "ports_description": {
         "3001/tcp": "Web interface",
-        "4000/tcp": "GraphQL server"
+        "3000/tcp": "GraphQL server"
     }
   }

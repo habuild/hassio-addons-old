@@ -1,4 +1,7 @@
 {
-    "db_url": "mysql://{username}:{password}@{host}/{database}",
-    "recording_folder": "/path/to/recordings"
+    "DATABASE_HOST": "",
+    "DATABASE_PORT": "",
+    "DATABASE_USER": "",
+    "DATABASE_PASS": "",
+    "DATABASE_NAME": ""
 }
