@@ -1,4 +1,4 @@
-ARG BUILD_FROM=hassioaddons/base:7.0.5
+ARG BUILD_FROM=hassioaddons/base:latest
 FROM $BUILD_FROM
 
 # Set shell
@@ -17,6 +17,7 @@ USER root
 RUN apk add --no-cache --virtual .build-dependencies \
     git \
     yarn \
+    nghttp2-dev \
     nodejs
 
 WORKDIR /opt/surveillancestream
