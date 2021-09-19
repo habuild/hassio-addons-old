@@ -41,6 +41,7 @@ RUN \
     \
     && cd frontend \
     && yarn install --network-timeout 1000000 \
+    && yarn add @swc/core-linux-musl \
     # && yarn run build \
     \
     && cd ..
