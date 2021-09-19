@@ -41,7 +41,7 @@ RUN \
     \
     && cd frontend \
     && yarn install --network-timeout 1000000 \
-    && yarn add @swc/core-linux-musl \
+    && yarn add @swc/core-linux-arm-gnueabihf \
     # && yarn run build \
     \
     && cd ..
