@@ -26,11 +26,12 @@ echo "SSL=${CONFIG_SSL}" >> /opt/surveillancestream/backend/.env
 # cat /opt/surveillancestream/backend/backend/prisma/.env
 # cat /opt/surveillancestream/backend/.env
 
+
 if $CONFIG_SSL
 then
-    echo "NEXT_PUBLIC_GQL_HOST=https://localhost:3000" > /opt/surveillancestream/frontend/.env
+    echo "NEXT_PUBLIC_GQL_HOST=https://$(bashio::addon.ip_address):3000" > /opt/surveillancestream/frontend/.env
 else
-    echo "NEXT_PUBLIC_GQL_HOST=http://localhost:3000" > /opt/surveillancestream/frontend/.env
+    echo "NEXT_PUBLIC_GQL_HOST=http://$(bashio::addon.ip_address):3000" > /opt/surveillancestream/frontend/.env
 fi
 
 # cat /opt/surveillancestream/frontend/.env
