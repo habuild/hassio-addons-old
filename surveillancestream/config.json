@@ -4,7 +4,7 @@
     "slug": "surveillance_stream",
     "description": "Surveillance stream",
     "arch": ["armv7"],
-    "startup": "before",
+    "startup": "application",
     "boot": "auto",
     "webui": "[PROTO:SSL]://[HOST]:[PORT:3001]",
     "ingress": true,
