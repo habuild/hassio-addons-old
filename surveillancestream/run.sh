@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bashio
 # config
 echo 'Build config'
 cat /data/options.json
