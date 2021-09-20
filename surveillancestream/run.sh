@@ -21,7 +21,7 @@ echo "DATABASE_PORT=${CONFIG_DATABASE_PORT}" >> /opt/surveillancestream/backend/
 echo "DATABASE_USER=${CONFIG_DATABASE_USER}" >> /opt/surveillancestream/backend/.env
 echo "DATABASE_PASS=${CONFIG_DATABASE_PASS}" >> /opt/surveillancestream/backend/.env
 echo "DATABASE_NAME=${CONFIG_DATABASE_NAME}" >> /opt/surveillancestream/backend/.env
-echo "DATABASE_NAME=${CONFIG_SSL}" >> /opt/surveillancestream/backend/.env
+echo "SSL=${CONFIG_SSL}" >> /opt/surveillancestream/backend/.env
 
 # cat /opt/surveillancestream/backend/backend/prisma/.env
 # cat /opt/surveillancestream/backend/.env
