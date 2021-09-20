@@ -43,7 +43,7 @@ echo 'Sync db'
 /opt/surveillancestream/backend/node_modules/.bin/ts-node /opt/surveillancestream/backend/src/tools/db-schema.ts
 
 # build frontend
-echo 'Build frontent'
+echo 'Build frontend'
 cd /opt/surveillancestream/frontend && yarn run build
 
 # back to root
