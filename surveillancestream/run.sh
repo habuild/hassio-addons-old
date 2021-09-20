@@ -26,7 +26,7 @@ echo "SSL=${CONFIG_SSL}" >> /opt/surveillancestream/backend/.env
 # cat /opt/surveillancestream/backend/backend/prisma/.env
 # cat /opt/surveillancestream/backend/.env
 
-if CONFIG_SSL
+if $CONFIG_SSL
 then
     echo "NEXT_PUBLIC_GQL_HOST=https://localhost:3000" > /opt/surveillancestream/frontend/.env
 else
