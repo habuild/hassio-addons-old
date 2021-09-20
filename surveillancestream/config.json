@@ -1,6 +1,6 @@
 {
     "name": "Surveillance stream",
-    "version": "0.0.16",
+    "version": "0.0.17",
     "slug": "surveillance_stream",
     "description": "Surveillance stream",
     "arch": ["armv7"],
@@ -13,21 +13,24 @@
     "hassio_api": true,
     "hassio_role": "default",
     "map": [
-        "share"
+        "share",
+        "ssl"
     ],
     "schema": {
         "DATABASE_HOST": "str",
         "DATABASE_PORT": "str",
         "DATABASE_USER": "str",
         "DATABASE_PASS": "str",
-        "DATABASE_NAME": "str"
+        "DATABASE_NAME": "str",
+        "SSL": "bool"
     },
     "options": {
         "DATABASE_HOST": "",
         "DATABASE_PORT": "",
         "DATABASE_USER": "",
         "DATABASE_PASS": "",
-        "DATABASE_NAME": ""
+        "DATABASE_NAME": "",
+        "SSL": true
     },
     "ports": {
         "3001/tcp": null,

@@ -8,6 +8,7 @@ CONFIG_DATABASE_PORT="$(jq --raw-output '.DATABASE_PORT' $CONFIG_PATH)"
 CONFIG_DATABASE_USER="$(jq --raw-output '.DATABASE_USER' $CONFIG_PATH)"
 CONFIG_DATABASE_PASS="$(jq --raw-output '.DATABASE_PASS' $CONFIG_PATH)"
 CONFIG_DATABASE_NAME="$(jq --raw-output '.DATABASE_NAME' $CONFIG_PATH)"
+CONFIG_SSL="$(jq --raw-output '.SSL' $CONFIG_PATH)"
 
 # echo "CONFIG_DB_URL=${CONFIG_DB_URL}"
 # echo "CONFIG_RECORDING_FOLDER=${CONFIG_RECORDING_FOLDER}"
@@ -20,11 +21,18 @@ echo "DATABASE_PORT=${CONFIG_DATABASE_PORT}" >> /opt/surveillancestream/backend/
 echo "DATABASE_USER=${CONFIG_DATABASE_USER}" >> /opt/surveillancestream/backend/.env
 echo "DATABASE_PASS=${CONFIG_DATABASE_PASS}" >> /opt/surveillancestream/backend/.env
 echo "DATABASE_NAME=${CONFIG_DATABASE_NAME}" >> /opt/surveillancestream/backend/.env
+echo "DATABASE_NAME=${CONFIG_SSL}" >> /opt/surveillancestream/backend/.env
 
 # cat /opt/surveillancestream/backend/backend/prisma/.env
 # cat /opt/surveillancestream/backend/.env
 
-echo "NEXT_PUBLIC_GQL_HOST=http://localhost:3000" > /opt/surveillancestream/frontend/.env
+if CONFIG_SSL
+then
+    echo "NEXT_PUBLIC_GQL_HOST=https://localhost:3000" > /opt/surveillancestream/frontend/.env
+else
+    echo "NEXT_PUBLIC_GQL_HOST=http://localhost:3000" > /opt/surveillancestream/frontend/.env
+fi
+
 # cat /opt/surveillancestream/frontend/.env
 
 # build backend
