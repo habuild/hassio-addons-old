@@ -2,13 +2,13 @@
 # config
 echo 'Build config'
 cat /data/options.json
-CONFIG_PATH=/data/options.json
-CONFIG_DATABASE_HOST="$(jq --raw-output '.DATABASE_HOST' $CONFIG_PATH)"
-CONFIG_DATABASE_PORT="$(jq --raw-output '.DATABASE_PORT' $CONFIG_PATH)"
-CONFIG_DATABASE_USER="$(jq --raw-output '.DATABASE_USER' $CONFIG_PATH)"
-CONFIG_DATABASE_PASS="$(jq --raw-output '.DATABASE_PASS' $CONFIG_PATH)"
-CONFIG_DATABASE_NAME="$(jq --raw-output '.DATABASE_NAME' $CONFIG_PATH)"
-CONFIG_SSL="$(jq --raw-output '.SSL' $CONFIG_PATH)"
+# CONFIG_PATH=/data/options.json
+CONFIG_DATABASE_HOST=$(bashio::config 'DATABASE_HOST') # "$(jq --raw-output '.DATABASE_HOST' $CONFIG_PATH)"
+CONFIG_DATABASE_PORT=$(bashio::config 'DATABASE_PORT') # "$(jq --raw-output '.DATABASE_PORT' $CONFIG_PATH)"
+CONFIG_DATABASE_USER=$(bashio::config 'DATABASE_USER') # "$(jq --raw-output '.DATABASE_USER' $CONFIG_PATH)"
+CONFIG_DATABASE_PASS=$(bashio::config 'DATABASE_PASS') # "$(jq --raw-output '.DATABASE_PASS' $CONFIG_PATH)"
+CONFIG_DATABASE_NAME=$(bashio::config 'DATABASE_NAME') # "$(jq --raw-output '.DATABASE_NAME' $CONFIG_PATH)"
+CONFIG_SSL=$(bashio::config 'SSL') # "$(jq --raw-output '.SSL' $CONFIG_PATH)"
 
 # echo "CONFIG_DB_URL=${CONFIG_DB_URL}"
 # echo "CONFIG_RECORDING_FOLDER=${CONFIG_RECORDING_FOLDER}"
