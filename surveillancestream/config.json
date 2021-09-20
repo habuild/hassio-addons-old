@@ -1,6 +1,6 @@
 {
     "name": "Surveillance stream",
-    "version": "0.0.19",
+    "version": "0.0.20",
     "slug": "surveillance_stream",
     "description": "Surveillance stream",
     "arch": ["armv7"],
@@ -33,8 +33,8 @@
         "SSL": true
     },
     "ports": {
-        "3001/tcp": null,
-        "3000/tcp": null
+        "3001/tcp": 3001,
+        "3000/tcp": 3000
     },
     "ports_description": {
         "3001/tcp": "Web interface",
