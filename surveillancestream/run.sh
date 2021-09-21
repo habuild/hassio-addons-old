@@ -32,10 +32,10 @@ echo $(bashio::info);
 
 if $CONFIG_SSL
 then
-    echo "NEXT_PUBLIC_GQL_HOST=https://$(bashio::info.hostname):3000" > /opt/surveillancestream/frontend/.env
+    echo "NEXT_PUBLIC_GQL_HOST=https://$(bashio::info.hostname):3000" >> /opt/surveillancestream/frontend/.env
     echo "NEXT_PUBLIC_ASSET_PREFIX=http://$(bashio::info.hostname):3001" >> /opt/surveillancestream/frontend/.env
 else
-    echo "NEXT_PUBLIC_GQL_HOST=http://$(bashio::info.hostname):3000" > /opt/surveillancestream/frontend/.env
+    echo "NEXT_PUBLIC_GQL_HOST=http://$(bashio::info.hostname):3000" >> /opt/surveillancestream/frontend/.env
     echo "NEXT_PUBLIC_ASSET_PREFIX=http://$(bashio::info.hostname):3001" >> /opt/surveillancestream/frontend/.env
 fi
 
