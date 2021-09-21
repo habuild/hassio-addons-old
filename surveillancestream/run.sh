@@ -28,6 +28,8 @@ echo "SSL=${CONFIG_SSL}" >> /opt/surveillancestream/backend/.env
 
 echo $(bashio::info);
 
+ echo "SSL=${CONFIG_SSL}" > /opt/surveillancestream/frontend/.env
+
 if $CONFIG_SSL
 then
     echo "NEXT_PUBLIC_GQL_HOST=https://$(bashio::info.hostname):3000" > /opt/surveillancestream/frontend/.env
