@@ -1,6 +1,6 @@
 {
     "name": "Surveillance stream",
-    "version": "0.0.29",
+    "version": "0.0.30",
     "slug": "surveillance_stream",
     "description": "Surveillance stream",
     "arch": ["armv7", "amd64"],
