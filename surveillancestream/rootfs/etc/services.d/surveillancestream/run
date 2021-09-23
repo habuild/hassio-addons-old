@@ -1,0 +1,15 @@
+#!/usr/bin/with-contenv bashio
+# ==============================================================================
+# Home Assistant Community Add-on: motionEye
+# Runs the motionEye
+# ==============================================================================
+declare -a options
+
+
+bashio::log.info "Starting Surveillancestream..."
+
+# Run the backend
+cd /opt/surveillancestream/backend && yarn run start&
+
+# Run the frontend
+cd /opt/surveillancestream/frontend && yarn run start
