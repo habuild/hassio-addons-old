@@ -25,6 +25,9 @@ echo "NEXT_PUBLIC_GQL_HOST=$(bashio::addon.ingress_entry)/graphql" > /opt/survei
 echo "NEXT_PUBLIC_ASSET_PREFIX=$(bashio::addon.ingress_entry)" >> /opt/surveillancestream/frontend/.env
 echo "SSL=false" >> /opt/surveillancestream/frontend/.env
 
+cat /opt/surveillancestream/backend/.env
+cat /opt/surveillancestream/frontend/.env
+
 bashio::log.info "Build backend"
 cd /opt/surveillancestream/backend && yarn run build
 
