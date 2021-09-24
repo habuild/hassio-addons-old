@@ -21,7 +21,7 @@ echo "DATABASE_PASS=${CONFIG_DATABASE_PASS}" >> /opt/surveillancestream/backend/
 echo "DATABASE_NAME=${CONFIG_DATABASE_NAME}" >> /opt/surveillancestream/backend/.env
 echo "SSL=false" >> /opt/surveillancestream/backend/.env
 
-echo "NEXT_PUBLIC_GQL_HOST=http://$(bashio::info.hostname):3000" > /opt/surveillancestream/frontend/.env
+echo "NEXT_PUBLIC_GQL_HOST=/graphql" > /opt/surveillancestream/frontend/.env
 echo "SSL=false" >> /opt/surveillancestream/frontend/.env
 
 bashio::log.info "Build backend"

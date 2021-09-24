@@ -15,7 +15,11 @@ server {
     ssl_certificate_key /ssl/{{ .keyfile }};
     {{ end }}
 
-    location / {
+    location /graphql {
         proxy_pass http://backend;
+    }
+
+    location / {
+        proxy_pass http://frontend;
     }
 }
