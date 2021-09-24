@@ -17,8 +17,8 @@ bashio::log.info $INGRESS_PORT
 bashio::log.info $INGRESS_ENTRY
 
 # replace INGRESS_ENTRY
-sed -i "s#%%INGRESS_ENTRY%%#${INGRESS_ENTRY}#g" /etc/nginx/templates/direct.tpl
-sed -i "s#%%INGRESS_ENTRY%%#${INGRESS_ENTRY}#g" /etc/nginx/templates/ingress.tpl
+sed -i "s#%%INGRESS_ENTRY%%#${INGRESS_ENTRY}#g" /etc/nginx/templates/direct.gtpl
+sed -i "s#%%INGRESS_ENTRY%%#${INGRESS_ENTRY}#g" /etc/nginx/templates/ingress.gtpl
 
 # Generate Ingress configuration
 bashio::var.json \
