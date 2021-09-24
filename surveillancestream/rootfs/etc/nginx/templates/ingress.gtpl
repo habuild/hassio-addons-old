@@ -19,5 +19,6 @@ server {
 
         sub_filter '/_next' '%%INGRESS_ENTRY%%/_next';
         sub_filter '/graphql' '%%INGRESS_ENTRY%%/graphql';
+        sub_filter_once off;
     }
 }

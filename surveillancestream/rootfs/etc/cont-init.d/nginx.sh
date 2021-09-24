@@ -4,7 +4,7 @@
 # Configures NGINX for use with motionEye
 # ==============================================================================
 
-bashio::log.level 'all'
+# bashio::log.level 'all'
 bashio::log.info 'run nginx.sh'
 bashio::log.info "$(bashio::addons)"
 
@@ -12,9 +12,13 @@ IP_ADDRESS="$(bashio::addon.ip_address)"
 INGRESS_PORT="$(bashio::addon.ingress_port)"
 INGRESS_ENTRY=$(bashio::addon.ingress_entry)
 
-
 bashio::log.info $IP_ADDRESS
 bashio::log.info $INGRESS_PORT
+bashio::log.info $INGRESS_ENTRY
+
+# replace INGRESS_ENTRY
+sed -i "s#%%INGRESS_ENTRY%%#${INGRESS_ENTRY}#g" /etc/nginx/templates/direct.tpl
+sed -i "s#%%INGRESS_ENTRY%%#${INGRESS_ENTRY}#g" /etc/nginx/templates/ingress.tpl
 
 # Generate Ingress configuration
 bashio::var.json \
