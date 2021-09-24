@@ -21,8 +21,5 @@ server {
 
     location / {
         proxy_pass http://frontend;
-
-        sub_filter '/graphql' '%%INGRESS_ENTRY%%/graphql';
-        sub_filter_once off;
     }
 }
