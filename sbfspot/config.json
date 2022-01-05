@@ -105,5 +105,5 @@
   },
   "host_network": true,
   "privileged": ["SYS_MODULE"],
-  "devices": ["/dev/ttyAMA0:/dev/ttyAMA0:rwm"]
+  "devices": ["/dev/ttyAMA0"]
 }
