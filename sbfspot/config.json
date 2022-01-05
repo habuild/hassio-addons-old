@@ -2,7 +2,7 @@
   "name": "SBFspot",
   "version": "2022.1.1",
   "slug": "sbfspot",
-  "description": "sbfspot",
+  "description": "Manage SBFspot with a simple interface",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "startup": "application",
   "boot": "auto",
@@ -52,7 +52,8 @@
 	"LogDir": null,
 	"LogLevel": "info",
 	"PVoutput_SID": null,
-	"PVoutput_Key": null
+	"PVoutput_Key": null,
+	"MQTT_ENABLE": "1" 
   },
   "schema": {
 	"BTAddress": "str",
@@ -99,7 +100,8 @@
 	"LogDir": "str",
 	"LogLevel": "str",
 	"PVoutput_SID": "str",
-	"PVoutput_Key": "str"
+	"PVoutput_Key": "str",
+	"MQTT_ENABLE": "int"
   },
   "host_network": true,
   "privileged": ["SYS_MODULE"],
