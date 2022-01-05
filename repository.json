@@ -1,5 +1,5 @@
 {
     "name": "Hass.IO add-on repository",
-    "url": "https://github.com/LauR3y/hassio-addons",
-    "maintainer": "Laurens Verschuere <hassio@laurensverschuere.be>"
+    "url": "https://github.com/habuild/hassio-addons",
+    "maintainer": "Hasqt <https://community.home-assistant.io/u/hasqt>"
   }
