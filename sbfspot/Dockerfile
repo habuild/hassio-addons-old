@@ -8,7 +8,7 @@ ENV MQTT_ENABLE 1
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # install requirements
-RUN apk update && apk upgrade && apk add --no-cache jq git g++ make musl-dev mysql-dev bluez-dev boost boost-dev curl-dev openrc
+RUN apk update && apk upgrade && apk add --no-cache jq git g++ make musl-dev mysql-dev bluez-dev boost boost-dev curl-dev mosquitto-clients openrc
 
 # openrc changes
 RUN \
