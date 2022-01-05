@@ -32,7 +32,7 @@ RUN mkdir -p /run/openrc && touch /run/openrc/softlevel
 # download and buid SBFspot
 RUN \
     cd /tmp \
-    && git clone https://github.com/LauR3y/SBFspot.git . \
+    && git clone https://github.com/habuild/SBFspot.git . \
     && cd SBFspot \
     && make mysql \
     && cd .. \
@@ -78,16 +78,16 @@ LABEL \
     io.hass.arch="${BUILD_ARCH}" \
     io.hass.type="addon" \
     io.hass.version=${BUILD_VERSION} \
-    maintainer="Laurens Verschuere <hassio@laurensverschuere.be>" \
+    maintainer="Hasqt <https://community.home-assistant.io/u/hasqt>" \
     org.label-schema.description="SBFspot, formerly known as SMAspot, is an open source project to get actual and archive data out of an SMA® inverter over Bluetooth or Ethernet (Speedwire®)" \
     org.label-schema.build-date=${BUILD_DATE} \
     org.label-schema.name="SBFspot" \
     org.label-schema.schema-version="1.0" \
-    org.label-schema.url="https://github.com/LauR3y/hassio-addons/tree/master/sbfspot" \
-    org.label-schema.usage="https://github.com/LauR3y/hassio-addons/tree/master/sbfspot/README.md" \
+    org.label-schema.url="https://github.com/habuild/hassio-addons/tree/master/sbfspot" \
+    org.label-schema.usage="https://github.com/habuild/hassio-addons/tree/master/sbfspot/README.md" \
     org.label-schema.vcs-ref=${BUILD_REF} \
-    org.label-schema.vcs-url="https://github.com/LauR3y/hassio-addons" \
-    org.label-schema.vendor="Laurens Verschuere"
+    org.label-schema.vcs-url="https://github.com/habuild/hassio-addons" \
+    org.label-schema.vendor="Hasqt"
 
 
 CMD [ "/run.sh" ]
