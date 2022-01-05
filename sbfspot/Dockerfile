@@ -2,6 +2,7 @@ ARG BUILD_FROM
 FROM $BUILD_FROM
 
 ENV LANG C.UTF-8
+ENV MQTT_ENABLE 1
 
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
