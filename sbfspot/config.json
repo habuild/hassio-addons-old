@@ -4,7 +4,7 @@
   "slug": "sbfspot",
   "description": "sbfspot",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
-  "startup": "before",
+  "startup": "application",
   "boot": "auto",
   "init": false,
   "options": {
@@ -83,5 +83,5 @@
   },
   "host_network": true,
   "privileged": ["SYS_MODULE"],
-  "devices": ["/dev/ttyAMA0:/dev/ttyAMA0:rwm"]
+  "devices": ["/dev/ttyAMA0:rwm"]
 }
