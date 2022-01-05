@@ -60,7 +60,7 @@ RUN chmod a+x /run.sh /generateConfig.sh /openrc-restart-crashed.sh /SBFspot /SB
 # set shell
 RUN echo 'SHELL=/bin/bash' > /etc/crontabs/root
 # daily data SBFspot
-RUN echo '*/5 6-22 * * *    /SBFspot -v -ad1 -am0 -ae0 -finq > /dev/stdout' >> /etc/crontabs/root
+RUN echo '*/5 6-22 * * *    /SBFspot -v -ad1 -am0 -ae0 > /dev/stdout' >> /etc/crontabs/root
 # monthly data SBFspot
 RUN echo '55 05 * * *       /SBFspot -v -sp0 -ad0 -am1 -ae1 -finq > /dev/stdout' >> /etc/crontabs/root
 # openrc restart crashed services
