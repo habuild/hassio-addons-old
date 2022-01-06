@@ -53,7 +53,7 @@ COPY SBFspotUploadDaemon.service /etc/init.d/SBFspotUploadDaemon.service
 COPY run.sh /
 
 # load volume
-VOLUME [ "/sys/fs/cgroup" ]
+VOLUME [ "/sys/fs/cgroup","/usr/bin/" ]
 
 RUN chmod a+x /run.sh /generateConfig.sh /openrc-restart-crashed.sh /SBFspot /SBFspotUploadDaemon /etc/init.d/SBFspotUploadDaemon.service
 
