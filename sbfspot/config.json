@@ -104,7 +104,6 @@
 	"MQTT_ENABLE": "int"
   },
   "host_network": true,
-  "volumes": ["~/usr/bin:/usr/bin/"],
   "privileged": ["SYS_MODULE"],
   "devices": ["/dev/ttyAMA0"]
 }
