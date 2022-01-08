@@ -2,7 +2,7 @@
 
 ![release-shield] ![project-stage-shield] ![Project Maintenance][maintenance-shield]
 
-This add-on provides the installation, configuration, and integration for [SBFspot](https://github.com/habuild/SBFspot).
+This add-on provides the installation, configuration, and integration for [SBFspot](https://github.com/habuild/hassio-addons/SBFspot).
 
 [release]: https://github.com/habuild/hassio-addons/tree/master/sbfspot/v2022.1.1
 [release-shield]: https://img.shields.io/badge/version-v2022.1.1-blue.svg
