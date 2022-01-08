@@ -27,7 +27,7 @@ Download and import either [No DB Drop create](https://github.com/habuild/hassio
 
 ### Example Configuration Options.
 can be copy/pasted as [Example Config](https://github.com/habuild/hassio-addons/blob/master/sbfspot/Example_Config.yaml) or entered via UI 
-![Example Options](https://github.com/habuild/hassio-addons/blob/master/images/Example_config_png.PNG) 
+![Example Options](https://raw.githubusercontent.com/habuild/hassio-addons/master/images/Example_config_png.PNG) 
 
 ### Data paths 
 In docker the /data/ path arrives at /usr/share/hassio/addons/data/a51a23d8_sbfspot	on the host. This needs to be corrected, I am not sure if this will work on a standard supervisor installation. testing required. Need to grep the upload log file back into HA log. The log file here may need to be cleaned up manually.
@@ -45,4 +45,4 @@ Refer to the [Wiki](https://github.com/SBFspot/SBFspot/wiki) for documentation a
 [release-shield]: https://img.shields.io/badge/version-v2022.1.1-blue.svg
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-experimental-yellow.svg
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2022.svg
-[screenshot]: https://github.com/habuild/hassio-addons/raw/main/images/Example_config_png.PNG
+[screenshot]: https://raw.githubusercontent.com/habuild/hassio-addons/master/images/Example_config_png.PNG
