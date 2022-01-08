@@ -45,4 +45,4 @@ Refer to the [Wiki](https://github.com/SBFspot/SBFspot/wiki) for documentation a
 [release-shield]: https://img.shields.io/badge/version-v2022.1.1-blue.svg
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-experimental-yellow.svg
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2022.svg
-[screenshot]: https://github.com/habuild/hassio-addons/raw/master/images/Example_config_png.PNG
+[screenshot]: https://github.com/habuild/hassio-addons/raw/main/images/Example_config_png.PNG
