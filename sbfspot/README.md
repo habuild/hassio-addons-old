@@ -11,7 +11,8 @@ It also sends a MQTT message to home assistant, therefore a MQTT broker is requi
 
 ### Initial database creation.
 Download and import either [No DB Drop create](https://github.com/habuild/hassio-addons/blob/master/sbfspot/CreateMySQLDB_no_drop.sql) **or** [Create My SQL.sql](https://github.com/SBFspot/SBFspot/blob/master/SBFspot/CreateMySQLDB.sql) in [phpMyAdmin](https://github.com/hassio-addons/addon-phpmyadmin) to create your database. **IF** you haven't already created the database previously, use the NO Drop version. You will also need to add the Database and User/Password to MariaDB and allocate the port.
-![screenshot](images/Example_config_png.PNG)
+
+![screenshot](https://raw.githubusercontent.com/habuild/hassio-addons/master/images/MariaDB%20setup.PNG)
 
 ### MQTT 
 [sbfspot_sensors.yaml](https://github.com/habuild/hassio-addons/blob/master/sbfspot/sbfspot_sensors.yaml) I use packages to include these yaml sensors. You will need to change to match your plant name and serial as you have set in the add-on configuration options. 
@@ -45,4 +46,4 @@ Refer to the [Wiki](https://github.com/SBFspot/SBFspot/wiki) for documentation a
 [release-shield]: https://img.shields.io/badge/version-v2022.1.1-blue.svg
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-experimental-yellow.svg
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2022.svg
-[screenshot]: https://raw.githubusercontent.com/habuild/hassio-addons/master/images/Example_config_png.PNG
+
