@@ -11,7 +11,7 @@ It also sends a MQTT message to home assistant, therefore a MQTT broker is requi
 
 ### Initial database creation.
 Download and import either [No DB Drop create](https://github.com/habuild/hassio-addons/blob/master/sbfspot/CreateMySQLDB_no_drop.sql) **or** [Create My SQL.sql](https://github.com/SBFspot/SBFspot/blob/master/SBFspot/CreateMySQLDB.sql) in [phpMyAdmin](https://github.com/hassio-addons/addon-phpmyadmin) to create your database. **IF** you haven't already created the database previously, use the NO Drop version. You will also need to add the Database and User/Password to MariaDB and allocate the port.
-![MariaDB config](https://github.com/habuild/hassio-addons/blob/master/sbfspot/MariaDB%20setup.PNG)
+![MariaDB config](https://github.com/habuild/hassio-addons/blob/master/images/MariaDB%20setup.PNG)
 
 ### MQTT 
 [sbfspot_sensors.yaml](https://github.com/habuild/hassio-addons/blob/master/sbfspot/sbfspot_sensors.yaml) I use packages to include these yaml sensors. You will need to change to match your plant name and serial as you have set in the add-on configuration options. 
@@ -27,7 +27,7 @@ Download and import either [No DB Drop create](https://github.com/habuild/hassio
 
 ### Example Configuration Options.
 can be copy/pasted as [Example Config](https://github.com/habuild/hassio-addons/blob/master/sbfspot/Example_Config.yaml) or entered via UI 
-![Example Options](https://github.com/habuild/hassio-addons/blob/master/sbfspot/Example_config_png.PNG) 
+![Example Options](https://github.com/habuild/hassio-addons/blob/master/images/Example_config_png.PNG) 
 
 ### Data paths 
 In docker the /data/ path arrives at /usr/share/hassio/addons/data/a51a23d8_sbfspot	on the host. This needs to be corrected, I am not sure if this will work on a standard supervisor installation. testing required. Need to grep the upload log file back into HA log. The log file here may need to be cleaned up manually.
