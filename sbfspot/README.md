@@ -30,7 +30,7 @@ can be copy/pasted as [Example Config](https://github.com/habuild/hassio-addons/
 ![Example Options](https://github.com/habuild/hassio-addons/blob/master/sbfspot/Example_config_png.PNG) 
 
 ### Data paths 
-In docker the /data/ path arrives at /usr/share/hassio/addons/data/a51a23d8_sbfspot	on the host. This needs to be corrected, I am not sure if this will work on a standard supervisor installation. testing required. Need to grep the upload log file back into HA log.
+In docker the /data/ path arrives at /usr/share/hassio/addons/data/a51a23d8_sbfspot	on the host. This needs to be corrected, I am not sure if this will work on a standard supervisor installation. testing required. Need to grep the upload log file back into HA log. The log file here may need to be cleaned up manually.
 
 ### **Link to SBFspot Documentation**
 Refer to the [Wiki](https://github.com/SBFspot/SBFspot/wiki) for documentation and FAQ.
