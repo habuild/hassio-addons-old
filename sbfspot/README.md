@@ -10,7 +10,7 @@ It also sends a MQTT message to home assistant, therefore a MQTT broker is requi
 # Installation
 
 ### Initial database creation.
-Download and import either [No DB Drop create](https://github.com/habuild/hassio-addons/blob/master/sbfspot/CreateMySQLDB_no_drop.sql) **or** [Create My SQL.sql](https://github.com/SBFspot/SBFspot/blob/master/SBFspot/CreateMySQLDB.sql) in [phpMyAdmin](https://github.com/hassio-addons/addon-phpmyadmin) to create your database. **IF** you haven't already created the database previously, use the NO Drop version. You will also need to add the Database and User/Password to MariaDB and allocate the port.
+Download and import either [No Drop DB create](https://github.com/habuild/hassio-addons/blob/master/sbfspot/CreateMySQLDB_no_drop.sql) **or** [Create My SQL.sql](https://github.com/SBFspot/SBFspot/blob/master/SBFspot/CreateMySQLDB.sql) in [phpMyAdmin](https://github.com/hassio-addons/addon-phpmyadmin) to create your database. **IF** you haven't already created the database previously, use the NO Drop version. You will also need to add the Database and User/Password to MariaDB and allocate the port.
 
 ![screenshot](https://raw.githubusercontent.com/habuild/hassio-addons/master/images/MariaDB%20setup.PNG)
 
