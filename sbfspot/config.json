@@ -22,7 +22,7 @@
 	"DateFormat": "%d/%m/%Y",
 	"DecimalPoint": "comma",
 	"TimeFormat": "%H:%M:%S",
-	"SynchTime": 7,
+	"SynchTime": 0,
 	"SynchTimeLow": 1,
 	"SynchTimeHigh": 3600,
 	"SunRSOffset": 900,
