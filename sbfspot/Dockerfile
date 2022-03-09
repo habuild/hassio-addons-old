@@ -73,6 +73,14 @@ RUN echo '*/15 * * * *       /openrc-restart-crashed.sh -- SBFspotUploadDaemon.s
 RUN rc-update add SBFspotUploadDaemon.service default
 
 # Labels
+
+ARG BUILD_ARCH
+ARG BUILD_DATE
+ARG BUILD_DESCRIPTION
+ARG BUILD_NAME
+ARG BUILD_REF
+ARG BUILD_REPOSITORY
+ARG BUILD_VERSION
 LABEL \
     io.hass.name="SBFspot" \
     io.hass.description="SBFspot, formerly known as SMAspot, is an open source project to get actual and archive data out of an SMA® inverter over Bluetooth or Ethernet (Speedwire®)" \
