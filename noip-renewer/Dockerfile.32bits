@@ -1,0 +1,29 @@
+FROM python:3.10.2-slim-bullseye@sha256:6faf002f0bce2ce81bec4a2253edddf0326dad23fe4e95e90d7790eaee653da5
+
+ARG PIP_VERSION
+ARG SELENIUM_VERSION="3.141.0"
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && \
+    pip install --no-cache-dir pip=="$PIP_VERSION" && \
+    pip install --no-cache-dir --user selenium=="$SELENIUM_VERSION"
+
+
+
+FROM python:3.10.2-slim-bullseye@sha256:6faf002f0bce2ce81bec4a2253edddf0326dad23fe4e95e90d7790eaee653da5
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends chromium chromium-driver && \
+    apt-get clean && \
+    rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/* /usr/share/doc /usr/share/man
+
+COPY --from=0 /root/.local /root/.local
+
+ENV PATH=/root/.local/bin:$PATH
+
+COPY renew-legacy.py renew.py
+
+ENTRYPOINT ["python3", "renew.py"]
