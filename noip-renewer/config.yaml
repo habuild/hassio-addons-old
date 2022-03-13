@@ -17,4 +17,4 @@ schema:
   tag: "str"
   email: "str"
   password: "str"
-#image: "ghcr.io/habuild/{arch}-addon-noip-renewer"
+image: "ghcr.io/habuild/{arch}-addon-noip-renewer"
