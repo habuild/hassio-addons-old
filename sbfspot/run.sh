@@ -8,6 +8,7 @@ echo 'Show all services.'
 rc-status -s
 
 # --- GENERATE CONFIG --
+echo "PWD is current directory $(pwd)"
 ./generateConfig.sh SBFspot.cfg SBFspotUpload.cfg
 
 # ---- RUN ----
