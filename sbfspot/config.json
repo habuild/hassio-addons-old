@@ -5,7 +5,7 @@
   "description": "Manage SBFspot with a simple interface",
   "url": "https://github.com/habuild/sbfspot_forked_addon_old/tree/master/sbfspot",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
-  "startup": "application",
+  
   "options": {
   	"BTAddress": null,
 	"Password": "0000",
